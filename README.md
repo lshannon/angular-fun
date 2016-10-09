@@ -8,8 +8,8 @@ A few years back I checked out JQuery and was really impressed. Using this and B
 
 Recently I decided to poke around and learn a full Javascript framework.
 
-My test for things like this is too jump into them right away and try and make something work.
+When evaluating technology like this my approach is to just jump in and start trying to make things work, see where I get. I looked a few and really liked Angular. I'm in no position to say its better than anything else, its just what clicked for me in terms of just being able to build cool stuff without much learning curve.
 
-I looked a few and really liked Angular. I have noticed that there is a 2.0 of Angular that seems different than all the books, blogs and tutorials out there. I decided to ignore that for now and play with the version of the framework that has been around the longest.
+I have noticed that there is a 2.0 of Angular that seems different than all the books, blogs and tutorials out there. I decided to ignore that for now and play with the version of the framework that has been around the longest.
 
 This repo is me having some fun with Angular :-)
