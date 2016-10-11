@@ -6,21 +6,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
-<h1>Playing With Objects</h1>
+<h1>Playing With Objects and Filters</h1>
 
 <div ng-app="myApp" ng-controller="namesCtrl">
 
+    <p>Working With a dynamic tables that writes out Objects</p>
     <table border="1" width="100%">
         <tr>
+            <!-- On click these heads call a Angular function -->
             <th ng-click="orderByMe('name')">Name</th>
             <th ng-click="orderByMe('country')">Country</th>
         </tr>
+        <!-- This row iterates the collection using a filter that orders based on the value clicked in the header -->
         <tr ng-repeat="x in names | orderBy:myOrderBy">
             <td>{{x.name}}</td>
             <td>{{x.country}}</td>
         </tr>
     </table>
 
+    <p>This shows how a Filter can be applied as the Model changes:</p>
+    <!-- Tests variables and filters -->
     <p><input type="text" ng-model="test"></p>
 
     <ul>
@@ -29,10 +34,18 @@
         </li>
     </ul>
 
+    <p>This is a list processed by a custom Filter (Upper Case Names every 2nd one):</p>
+    <!-- Test a customer filter -->
+    <ul ng-app="myApp" ng-controller="secondCtrl">
+        <li ng-repeat="x in secondNames">
+            {{x | myFormat}}
+        </li>
+    </ul>
+
 </div>
 
 <script>
-    angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    var app = angular.module('myApp', []).controller('namesCtrl', function($scope) {
         $scope.names = [
             {name:'Jani',country:'Norway'},
             {name:'Carl',country:'Sweden'},
@@ -47,6 +60,22 @@
         $scope.orderByMe = function(x) {
             $scope.myOrderBy = x;
         }
+    });
+    app.filter('myFormat', function() {
+        return function(x) {
+            var i, c, txt = "";
+            for (i = 0; i < x.length; i++) {
+                c = x[i];
+                if (i % 2 == 0) {
+                    c = c.toUpperCase();
+                }
+                txt += c;
+            }
+            return txt;
+        };
+    });
+    app.controller('secondCtrl', function($scope) {
+        $scope.secondNames = ['he-Man', 'chuck', 'king kong', 'astro boy'];
     });
 </script>
 
