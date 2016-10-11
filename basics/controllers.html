@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!-- for this one we load angular right away -->
+<body ng-app="myApp">
+<h1>Controllers</h1>
+
+<p>View, which is the HTML.</p>
+<p>Model, which is the data available for the current view.</p>
+<p>Controller, which is the JavaScript function that makes/changes/removes/controls the data.</p>
+
+<p>This is a Div getting populated with a value created in a controller</p>
+<div ng-controller="myCtrl">
+    Name: <input ng-model="name" size="60">
+    <h1 ng-click="changeName()">The Name Variables set in the controller (Click to Change): {{name}}</h1>
+</div>
+
+<br>
+    <div ng-controller="bonusCtrl">
+        Result Of A Function: {{newName()}}
+    </div>
+<br>
+The name is the rootScope: {{name}}
+<script>
+    //this command creates the new module
+    var app = angular.module("myApp", []);
+    app.run(function($rootScope) {
+        $rootScope.name = 'Murphy';
+    });
+    //pass the scope into the function
+    app.controller('myCtrl', function($scope) {
+        $scope.name = "He-man Hogan";
+        $scope.changeName = function() {
+            $scope.name = "Attack of the Biilllgge Rats!";
+        }
+    })
+    app.controller('bonusCtrl', function($scope) {
+        $scope.newName = function() {
+            return "Surprise!";
+        };
+    })
+</script>
+
+</body>
+</html>

@@ -9,16 +9,22 @@
 <p>The following Div calls a modules that creates a custom directive and generates its content</p>
 <custom></custom>
 
+<p>This one is a regular tag with the custom directive attribute</p>
+<div customDiv></div>
+
 <script>
     //this command creates the new module
     var app = angular.module("myApp", []);
     //app directive can create a
     app.directive("custom", function() {
         return {
+            restrict : "EC",
             //this is the content that gets put into the custom tag
-            template : "<h2>Custom Directive Content Baby</h2><p>This created when the page loaded</p>"
+            template : "<h2>Custom Directive Content Baby</h2>"
         };
-    });
+    }
+
+    );
 </script>
 
 </body>
