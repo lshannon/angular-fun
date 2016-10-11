@@ -33,6 +33,24 @@
 
 </div>
 
+<!-- Interval Example -->
+<h2>This updates the time every 2 seconds</h2>
+<div ng-controller="intervalCtrl">
+
+<p>The time is:</p>
+
+<h3>{{theTime}}</h3>
+
+</div>
+
+<!-- Custom Service Example -->
+<h2>This an example of calling a custom service:</h2>
+
+<div ng-controller="customCtrl">
+    <p>The hexadecimal value of 255 is:</p>
+
+    <h3>{{hex}}</h3>
+</div>
 <script>
     var app = angular.module('myApp', []);
     app.controller('locationCtrl', function($scope, $location) {
@@ -53,6 +71,20 @@
         $timeout(function () {
             $scope.timerMessage = "How are you today?";
         }, 2000);
+    });
+    app.controller('intervalCtrl', function($scope, $interval) {
+        $scope.theTime = new Date().toLocaleTimeString();
+        $interval(function () {
+            $scope.theTime = new Date().toLocaleTimeString();
+        }, 2000);
+    });
+    app.service('hexafy', function() {
+        this.myFunc = function (x) {
+            return x.toString(16);
+        }
+    });
+    app.controller('customCtrl', function($scope, hexafy) {
+        $scope.hex = hexafy.myFunc(255);
     });
 </script>
 </body>
