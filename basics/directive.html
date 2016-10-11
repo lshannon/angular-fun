@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!-- for this one we load angular right away -->
+<body ng-app="myApp">
+<h1>Custom Directive</h1>
+
+<p>In this example I am playing with Modules and directives</p>
+<p>The following Div calls a modules that creates a custom directive and generates its content</p>
+<custom></custom>
+
+<script>
+    //this command creates the new module
+    var app = angular.module("myApp", []);
+    //app directive can create a
+    app.directive("custom", function() {
+        return {
+            //this is the content that gets put into the custom tag
+            template : "<h2>Custom Directive Content Baby</h2><p>This created when the page loaded</p>"
+        };
+    });
+</script>
+
+</body>
+</html>
