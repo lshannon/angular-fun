@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<h1>Services Examples</h1>
+
+<!-- Using the location services -->
+<h2>Using the location service</h2>
+<div ng-controller="locationCtrl">
+    <p>The url of this page is:</p>
+    <h3>{{myUrl}}</h3>
+</div>
+
+<!-- Using the HTTP service -->
+<h2>This is trying to the http service, but it needs to be run on a server that allows CORS</h2>
+<div ng-controller="httpCtrl">
+
+    <p>Today's welcome message is:</p>
+
+    <h3>{{myWelcome}}</h3>
+
+</div>
+
+<!-- Using the Time Service -->
+<h2>Timer Service Example:</h2>
+<div ng-controller="timerCtrl">
+
+    <h3>This header will change after two seconds:</h3>
+
+    <p style="color: lightgreen">{{timerMessage}}</p>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('locationCtrl', function($scope, $location) {
+        $scope.myUrl = $location.absUrl();
+    });
+    app.controller('httpCtrl', function($scope, $http) {
+        $http({
+            method : "GET",
+            url : "http://www.w3schools.com/angular/welcome.htm"
+        }).then(function mySucces(response) {
+            $scope.myWelcome = response.data;
+        }, function myError(response) {
+            $scope.myWelcome = "No CORS on the request. Default message";
+        });
+    });
+    app.controller('timerCtrl', function($scope, $timeout) {
+        $scope.myHeader = "Hello World!";
+        $timeout(function () {
+            $scope.timerMessage = "How are you today?";
+        }, 2000);
+    });
+</script>
+</body>
+</html>
