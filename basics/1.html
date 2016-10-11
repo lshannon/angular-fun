@@ -12,7 +12,7 @@ In Angular modules define the application and controllers controll the applicati
 
  -->
 <div ng-app="" ng-init="value1=2;value2=5;col='black';goals=['Get Angular Running','Try Out Variables','Try Outlists','Modify The UI A Bit'];colours=['red','green','blue']">
-    <p>Goals For This Page</p>
+    <p>Goals For This Page (Coming from an Angular Array)</p>
     <ul>
         <li ng-repeat="x in goals">
             {{ x }}
@@ -22,7 +22,7 @@ In Angular modules define the application and controllers controll the applicati
     <!-- ng-model binds the value to the variable -->
     <p>Type A Name Here : <input type="text" ng-model="name"></p>
     <p>The name you type above shows up here: {{name}}</p>
-    <p>Here are the colours you can pick for the math example:</p>
+    <p>Here are the colours you can pick for the math example (also coming from an Array):</p>
     <ol start="0">
         <li ng-repeat="x in colours">
             {{ x }}
