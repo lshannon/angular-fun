@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JSON Fun</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+
+<h2>JSON Fun</h2>
+<p>This page calls http://html-cors-enabled.cfapps.io/persons and writes out the JSON that returns:</p>
+
+<div ng-app="myApp" ng-controller="nameCtrl">
+
+    <ul>
+        <li ng-repeat="x in persons">
+            {{ x.name + ', ' + x.age }}
+        </li>
+    </ul>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('nameCtrl', function($scope, $http) {
+        $http.get("http://html-cors-enabled.cfapps.io/persons")
+                .then(function(response)
+                {
+
+                $scope.persons = response.data.records;
+                    console.log('Got a response: ' + $scope.persons);
+                }, function myError(response) {
+                    console.log('No Response');
+                    $scope.message = "Not able to make JSON call";
+                });
+    });
+</script>
+</body>
+</html>
