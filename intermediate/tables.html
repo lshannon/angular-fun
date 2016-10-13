@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Tables</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <style>
+        table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="nameCtrl">
+
+    <table>
+        <tr ng-repeat="x in names | orderBy : 'age'">
+            <td ng-if="$even" style="background-color:#f1f1f1">Array Index Odd: {{ $index }}</td>
+            <td ng-if="$odd">Array Index Even: {{ $index }}</td>
+            <td ng-if="$even" style="background-color:#f1f1f1">Odd: {{ x.name | lowercase }}</td>
+            <td ng-if="$odd" >Even: {{ x.name | lowercase }}</td>
+            <td ng-if="$even" style="background-color:#f1f1f1">Odd: {{ x.age }}</td>
+            <td ng-if="$odd">Even: {{ x.age }}</td>
+        </tr>
+    </table>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('nameCtrl', function($scope, $http)
+    {
+        $http.get("http://html-cors-enabled.cfapps.io/persons")
+                .then(
+                        function (response) {$scope.names = response.data;}
+                );
+    });
+</script>
+
+</body>
+</html>

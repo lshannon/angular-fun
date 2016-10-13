@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Dom Manipulation With Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-init="mySwitch=true" ng-controller="timeCtrl">
+
+    <h2>Basic Fun With Controls (Hiding And Showing):</h2>
+    <p>
+        <button ng-disabled="mySwitch">Try and click Me!</button>
+    </p>
+    <p>
+        <input type="checkbox" ng-model="mySwitch"/>Click Me To Click Him
+    </p>
+    <p>
+       Botton Should Be Visible: {{ !mySwitch }}
+    </p>
+
+    <h2>Time Based Hiding And Showing</h2>
+    <h3 ng-show="theTime > 12">Its past Noon, read me!</h3>
+    <h3 ng-show="theTime < 12">Its before Noon, read me!</h3>
+    <p>There should only be one read me messages above, depending on the hour of the day: {{theTime}}</p>
+
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('timeCtrl', function($scope, $interval) {
+        $scope.theTime = new Date().getHours();
+    });
+</script>
+</body>
+</html>

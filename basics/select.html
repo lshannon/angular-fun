@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Controller with Angular!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <h1>Basic Select Generation With Angular</h1>
+    <p>Generate a Select List and Capture The Values</p>
+        <div ng-app="myApp" ng-controller="nameCtrl" >
+        <select ng-model="selectedPerson" ng-options="x.name for x in persons">
+        </select>
+
+        <h2>You selected: {{selectedPerson.name}}</h2>
+        <h2>Their age is: {{selectedPerson.age}}</h2>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('nameCtrl', function($scope, $http) {
+            $http.get("http://html-cors-enabled.cfapps.io/persons")
+                    .then(function(response)
+                    {
+                        console.log('Got a response: ' + $scope.persons);
+                        $scope.persons = response.data;
+                    }, function myError(response) {
+                        console.log('No Response');
+                        $scope.message = "Not able to make JSON call";
+                    });
+        });
+    </script>
+
+</body>
+</html>

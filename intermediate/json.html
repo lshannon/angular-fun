@@ -26,9 +26,8 @@
         $http.get("http://html-cors-enabled.cfapps.io/persons")
                 .then(function(response)
                 {
-
-                $scope.persons = response.data.records;
                     console.log('Got a response: ' + $scope.persons);
+                    $scope.persons = response.data;
                 }, function myError(response) {
                     console.log('No Response');
                     $scope.message = "Not able to make JSON call";
