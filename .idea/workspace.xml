@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06dc2bdf-0483-4152-9787-edcbcaa37d0b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basics/dom.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basics/select.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/intermediate/events.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/intermediate/tables.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intermediate/json.html" afterPath="$PROJECT_DIR$/intermediate/json.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basics/forms.html" afterPath="$PROJECT_DIR$/basics/forms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intermediate/events.html" afterPath="$PROJECT_DIR$/intermediate/events.html" />
     </list>
     <ignored path="angular-fun.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,108 +26,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="directive.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basics/directive.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controllers.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basics/controllers.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="objects.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basics/objects.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intermediate/services.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="98" column="7" selection-start-line="93" selection-start-column="3" selection-end-line="98" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="json.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intermediate/json.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="35" column="9" selection-start-line="22" selection-start-column="0" selection-end-line="35" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tables.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/intermediate/tables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="select.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basics/select.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dom.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basics/dom.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="events.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/intermediate/events.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forms.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basics/forms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="363">
+              <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#p#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,7 +56,6 @@
       <list>
         <option value="$PROJECT_DIR$/basics/1.html" />
         <option value="$PROJECT_DIR$/basics/directive.html" />
-        <option value="$PROJECT_DIR$/basics/forms.html" />
         <option value="$PROJECT_DIR$/basics/controllers.html" />
         <option value="$PROJECT_DIR$/basics/objects.html" />
         <option value="$PROJECT_DIR$/intermediate/message.html" />
@@ -165,6 +67,7 @@
         <option value="$PROJECT_DIR$/basics/select.html" />
         <option value="$PROJECT_DIR$/basics/dom.html" />
         <option value="$PROJECT_DIR$/intermediate/events.html" />
+        <option value="$PROJECT_DIR$/basics/forms.html" />
       </list>
     </option>
   </component>
@@ -342,15 +245,15 @@
       <option name="presentableId" value="Default" />
       <updated>1476030480331</updated>
       <workItem from="1476030481804" duration="16425000" />
-      <workItem from="1476376864280" duration="3919000" />
+      <workItem from="1476376864280" duration="6898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20344000" />
+    <option name="totallyTimeSpent" value="23323000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -419,6 +322,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/message.html" />
+    <entry file="file://$PROJECT_DIR$/http-service/manifest.yml" />
+    <entry file="file://$PROJECT_DIR$/http-service/index.html" />
+    <entry file="file://$PROJECT_DIR$/basics/controllers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/basics/directive.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -435,21 +349,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/message.html" />
-    <entry file="file://$PROJECT_DIR$/http-service/manifest.yml" />
-    <entry file="file://$PROJECT_DIR$/http-service/index.html" />
-    <entry file="file://$PROJECT_DIR$/basics/controllers.html">
+    <entry file="file://$PROJECT_DIR$/intermediate/services.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="92" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="98" column="7" selection-start-line="93" selection-start-column="3" selection-end-line="98" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basics/select.html">
+    <entry file="file://$PROJECT_DIR$/intermediate/json.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        <state relative-caret-position="770">
+          <caret line="35" column="9" selection-start-line="22" selection-start-column="0" selection-end-line="35" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -466,28 +379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/intermediate/json.html">
+    <entry file="file://$PROJECT_DIR$/basics/select.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="9" selection-start-line="22" selection-start-column="0" selection-end-line="35" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/intermediate/services.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="98" column="7" selection-start-line="93" selection-start-column="3" selection-end-line="98" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basics/forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="231">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -502,9 +397,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/intermediate/events.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="407">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics/forms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

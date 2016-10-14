@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Basic Form Example</title>
     <style>
+        <!-- these are Angular specific CSS -->
         input.ng-invalid {
             background-color: lightblue;
         }
@@ -16,19 +17,74 @@
         }
     </style>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="formCtrl">
 <h1>Playing With Forms</h1>
 <p>Simple Form:</p>
-<form ng-app="" name="myForm" ng-init="myText = 'email@email.com'">
+<form name="myForm">
     Email:
-    <input type="email" name="myAddress" ng-model="myText">
+    <input type="email" name="myAddress" ng-model="email">
     <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+    <br>
+    Check to show a header:
+    <input type="checkbox" ng-model="myVar">
+    <br>
+    Pick a hero:
+    <br>
+    <input type="radio" ng-model="radioSelected" value="Power Man">Luke Cage
+    <br>
+    <input type="radio" ng-model="radioSelected" value="Silver Surfer">Norrin Radd
+    <br>
+    <input type="radio" ng-model="radioSelected" value="Hulk">Bruce Banner
     <h1>Status</h1>
     Email is valid: {{myForm.myAddress.$valid}}
     <br>
     Email is dirty: {{myForm.myAddress.$dirty}}
     <br>
     Email has been touched: {{myForm.myAddress.$touched}}
+    <br>
+    Radio Button Selected: {{radioSelected}}
+    <p ng-show="myVar">The Header Now Shown</p>
+    <br>
+    <button ng-click="reset()">RESET</button>
 </form>
+
+<p>Form With Validation:</p>
+<form ng-controller="validateCtrl" name="myValidatedForm" novalidate>
+
+    <p>Username:<br>
+        <input type="text" name="user" ng-model="user" required>
+        <span style="color:red" ng-show="myValidatedForm.user.$dirty && myValidatedForm.user.$invalid">
+  <span ng-show="myValidatedForm.user.$error.required">Username is required.</span>
+  </span>
+    </p>
+
+    <p>Email:<br>
+        <input type="email" name="email" ng-model="email" required>
+        <span style="color:red" ng-show="myValidatedForm.email.$dirty && myValidatedForm.email.$invalid">
+  <span ng-show="myValidatedForm.email.$error.required">Email is required.</span>
+  <span ng-show="myValidatedForm.email.$error.email">Invalid email address.</span>
+  </span>
+    </p>
+
+    <p>
+        <input type="submit"
+               ng-disabled="myValidatedForm.user.$dirty && myValidatedForm.user.$invalid ||
+  myValidatedForm.email.$dirty && myValidatedForm.email.$invalid">
+    </p>
+
+</form>
+
+
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('formCtrl', function($scope) {
+        $scope.email = "srogers@avengers.com";
+    });
+    app.controller('validateCtrl', function($scope) {
+        $scope.user = 'John Doe';
+        $scope.email = 'john.doe@gmail.com';
+    });
+</script>
 </body>
 </html>

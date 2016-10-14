@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Angular Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
+<h1>This some fun with Events</h1>
 
+<h2>Simple Counting</h2>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    <button ng-click="count = count + 1">Click me!</button>
+
+    <p>{{ count }}</p>
+
+    <h2>How about dynamically showing something?</h2>
+    <button ng-click="myFunc()">Click Me!</button>
+
+    <div ng-show="showMe">
+        <h1>Menu:</h1>
+        <div>Pizza</div>
+        <div>Pasta</div>
+        <div>Pesce</div>
+    </div>
+
+
+    <h2 ng-mousemove="position($event)">How About the Mouse Move Event</h2>
+
+    <p>Coordinates: {{x + ', ' + y}}</p>
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.count = 0;
+        $scope.myFunc = function() {
+            $scope.showMe = !$scope.showMe;
+        }
+        $scope.position = function(myE) {
+            $scope.x = myE.clientX;
+            $scope.y = myE.clientY;
+        }
+    });
+</script>
 </body>
 </html>
