@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    @keyframes myChange {
+        from {
+            height: 100px;
+        } to {
+              height: 0;
+          }
+    }
+    div {
+        transition: all linear 0.5s;
+        background-color: lightblue;
+        height: 100px;
+    }
+
+    .ng-hide {
+        height: 0;
+    }
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+<body ng-app="myApp">
+
+<h1>Hide the DIV using CSS: <input type="checkbox" ng-model="myCheck"></h1>
+
+<div ng-hide="myCheck"></div>
+
+
+<script>
+    var app = angular.module('myApp', ['ngAnimate']);
+</script>
+
+</body></html>

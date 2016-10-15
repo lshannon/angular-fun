@@ -2,10 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple HTML Service</title>
+    <title>Single Page Angular Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 </head>
-<body>
-<h1>Simple HTML page to practise Angular HTTP Service</h1>
+<body ng-app="myApp">
+
+<p><a href="/">Main</a></p>
+
+<a href="#a">A</a>
+<a href="#b">B</a>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/a", {
+        templateUrl : "a.html"
+    })
+    .when("/b", {
+        templateUrl : "b.html"
+    });
+});
+</script>
 
 </body>
 </html>

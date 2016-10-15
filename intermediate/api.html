@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<h1>Playing with Angular Global API Functions</h1>
+<p>Lower Case</p>
+<div ng-controller="lower">
+    <p>Orginal: {{ x1 }}</p>
+    <p>After Function: {{ x2 }}</p>
+</div>
+<p>Check For Strings</p>
+<div ng-controller="isString">
+    <p>Orginal: {{ x1 }}</p>
+    <p>Is A String: {{ x2 }}</p>
+</div>
+
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('lower', function($scope) {
+        $scope.x1 = "JOHN";
+        $scope.x2 = angular.lowercase($scope.x1);
+    });
+    app.controller('isString', function($scope) {
+        $scope.x1 = "JOHN";
+        $scope.x2 = angular.isString($scope.x1);
+    });
+</script>
+
+</body>
+</html>

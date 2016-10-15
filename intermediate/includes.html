@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Includes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<p>We have an include here:</p>
+<div ng-controller="customersCtrl">
+    <div ng-include="'http://localhost:8080/json-include.html'"></div>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+        $http.get("http://html-cors-enabled.cfapps.io/persons")
+                .then(function(response)
+                {
+                    console.log('Got a response: ' + $scope.persons);
+                    $scope.persons = response.data;
+                }, function myError(response) {
+                    console.log('No Response');
+                    $scope.message = "Not able to make JSON call";
+                });
+    });
+    app.config(function($sceDelegateProvider) {
+        $sceDelegateProvider.resourceUrlWhitelist([
+            'http://localhost:8080/**'
+        ]);
+    });
+</script>
+
+
+</body>
+</html>
